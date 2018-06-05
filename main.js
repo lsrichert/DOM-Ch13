@@ -1,36 +1,8 @@
 
-
-// // A new "virtual" document fragment to contain components
-// const fragment = document.createDocumentFragment()
-
-// // Create an emperor component element
-// const julius = document.createElement('div')
-// julius.textContent = "Julius Caesar"
-// fragment.appendChild(julius)
-
-// // Create an emperor component element
-// const augustus = document.createElement('div')
-// augustus.textContent = "Augustus Caesar"
-// fragment.appendChild(augustus)
-
-// // Create an emperor component element
-// const aurelius = document.createElement('div')
-// aurelius.textContent = "Marcus Aurelius"
-// fragment.appendChild(aurelius)
-
-// console.log("fragment:", fragment);
+// Chapter 13 Creating Components in Javascript
 
 
-
-// /*
-//     Now I can update my HTML document all at once, with all
-//     three emperor components rendered. Otherwise, I would
-//     have needed to add each one, individually - a much more
-// //     "expensive" operation.
-// // */
-// document.querySelector("#emperorList").appendChild(fragment)
-
-const messages = document.querySelector("#messages")
+const messagesArticle = document.querySelector("#messages")
 console.log("step 1", messages)
 
 const sectionsFragment = document.createDocumentFragment()
@@ -99,12 +71,12 @@ sectionsFragment.appendChild(sectionFive)
 
 // const sectionTexts = [all the words go here in quotes]
 
-for (let i = 0; i , sectionTexts.length; i++){
+for (let i = 0; i < sectionTexts.length; i++) {
     const sectionElement = createSectionEl(sectionTexts[i])
-    sectionsFragment.appendChild(sectonFragment)
+    sectionsFragment.appendChild(sectionFragment)
 }
 
-
+messagesArticle.appendChild(sectionsFragment)
 
 
 
